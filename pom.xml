@@ -11,7 +11,7 @@
     
     <groupId>com.example</groupId>
     <artifactId>payments-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+   <version>1.0.0</version>
     <name>payments-api</name>
     <description>API de Pagamentos</description>
 
