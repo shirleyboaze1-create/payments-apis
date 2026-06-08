@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.Map;c
 import java.util.Optional;
 import java.util.UUID;
 
@@ -20,7 +20,7 @@ public class PaymentController {
     }
 
     // Criar pagamento
-    @PostMapping("/payments")
+    @PostMapping("v1/payments")
     public ResponseEntity<?> criarPagamento(@RequestBody Payment payment) {
 
         if (payment.getAmount() == null || payment.getAmount().doubleValue() <= 0) {
@@ -53,7 +53,7 @@ public class PaymentController {
     }
 
     // Consultar pagamento pelo ID
-    @GetMapping("/payments/{id}")
+    @GetMapping("v1/payments/{id}")
     public ResponseEntity<?> consultarPagamento(@PathVariable String id) {
 
         try {
@@ -82,7 +82,7 @@ public class PaymentController {
     }
 
     // Webhook do M-Pesa
-    @PostMapping("/webhooks/mpesa")
+    @PostMapping("v1/webhooks/mpesa")
     public ResponseEntity<String> webhookMpesa(@RequestBody Map<String, Object> callbackData) {
 
         try {
